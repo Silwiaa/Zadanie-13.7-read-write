@@ -16,10 +16,10 @@ fs.readFile('text.txt', 'utf-8', function(err, data) {
     });
 });
 
-fs.readdir('../zadanie_13_7', function(err, data) {
+fs.readdir('./', function(err, data) {
     console.log('Folder przed zapisem'.yellow);
     
-    fs.writeFile('./text.txt', '\nPlik po zapisie', function(err) {
+    fs.writeFile('./text.txt', data.join(','), function(err) {
         console.log('Zapisano nowy plik'.yellow);
     });
 });
